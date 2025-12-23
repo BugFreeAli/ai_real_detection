@@ -25,7 +25,7 @@
 <br />
 
 <!-- ⚠️ REPLACE THIS URL WITH A SCREENSHOT OF YOUR BEAUTIFUL UI -->
-![Dashboard Screenshot](https://via.placeholder.com/1200x600?text=Insert+Screenshot+of+NeuralVerify+Dashboard+Here)
+![Dashboard Screenshot](<img width="1365" height="689" alt="Screenshot 2025-12-23 073640" src="https://github.com/user-attachments/assets/124f3529-fc00-435a-916a-2c503d7f308d" />)
 
 ---
 

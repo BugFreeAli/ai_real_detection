@@ -1,57 +1,80 @@
 <div align="center">
 
-  <h1>🛡️ NeuralVerify</h1>
-  <h3>Enterprise-Grade AI Deepfake Detection System</h3>
+  <h1>🛡️ NeuralVerify: The Client</h1>
+  <h3>Enterprise-Grade AI Detection Dashboard</h3>
 
   <p>
-    <strong>Detects Flux.1, Midjourney v6, Stable Diffusion, and GANs with 85%+ Accuracy.</strong>
+    <strong>A modern, responsive React application for forensic image analysis.</strong>
   </p>
 
   <p>
     <a href="https://ai-real-neural.vercel.app"><strong>🔴 Live Demo</strong></a> •
-    <a href="#-tech-stack"><strong>🛠️ Tech Stack</strong></a> •
-    <a href="#-architecture"><strong>🏗️ Architecture</strong></a> •
-    <a href="#-model-performance"><strong>📊 Benchmarks</strong></a>
+    <a href="#-features"><strong>✨ Features</strong></a> •
+    <a href="#-tech-stack"><strong>🛠️ Tech Stack</strong></a>
   </p>
 
-  <!-- Add badges for "Wow" factor -->
-  <img src="https://img.shields.io/badge/Model-EfficientNetV2-blue?style=for-the-badge&logo=tensorflow" alt="Model" />
-  <img src="https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi" alt="Backend" />
-  <img src="https://img.shields.io/badge/Frontend-React_Vite-61DAFB?style=for-the-badge&logo=react" alt="Frontend" />
-  <img src="https://img.shields.io/badge/Deploy-Docker-2496ED?style=for-the-badge&logo=docker" alt="Docker" />
+  <!-- BADGES -->
+  <img src="https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
+  <img src="https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+  <img src="https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind-CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/Deployed_on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
 
 </div>
 
 <br />
 
-<!-- PLACEHOLDER FOR YOUR UI SCREENSHOT -->
-<!-- Upload a screenshot of your Vercel app to your repo and link it here -->
-![Dashboard Preview](https://via.placeholder.com/1200x600?text=Upload+Your+App+Screenshot+Here)
+<!-- ⚠️ REPLACE THIS URL WITH A SCREENSHOT OF YOUR BEAUTIFUL UI -->
+![Dashboard Screenshot](https://via.placeholder.com/1200x600?text=Insert+Screenshot+of+NeuralVerify+Dashboard+Here)
 
 ---
 
-## 💡 What is NeuralVerify?
+## 💡 Overview
 
-**NeuralVerify** is a full-stack AI forensic tool designed to combat misinformation. Unlike generic classifiers, this system is engineered to detect the specific "mathematical fingerprints" left by modern Latent Diffusion Models (LDMs) and Transformers.
+**NeuralVerify Client** is the user-facing interface for the NeuralVerify ecosystem. It provides a seamless, secure, and responsive way for users to interact with the deep learning backend.
 
-It utilizes a **Microservices Architecture**, decoupling the heavy Neural Network inference (Python/Docker) from the client-facing application (React/Edge).
-
-### ✨ Key Features
-*   **Multi-Engine Detection:** Specifically trained to spot artifacts from **Flux.1**, **Midjourney**, **Stable Diffusion**, and **StyleGAN**.
-*   **Confidence Thresholding:** The UI flags "Inconclusive" results (40-60% confidence) to prevent false accusations.
-*   **High-Res Analysis:** Optimized for 224x224 resolution to analyze skin texture and high-frequency noise.
-*   **Zero-Shot Robustness:** Includes Gaussian Noise injection during training to simulate camera ISO grain.
+Built with **Vite** and **TypeScript**, it prioritizes speed and type safety, ensuring a crash-free experience even when handling large image payloads.
 
 ---
 
-## 🏗️ Architecture
+## ✨ Key Features
 
-The system operates on a decoupled **Client-Server** model to ensure scalability.
+### 🔍 Precision Analysis UI
+*   **Real-Time Inference:** Connects to the Python microservice for millisecond-latency predictions.
+*   **Smart Confidence Thresholds:**
+    *   🟢 **Real (99-60%):** Verified Authentic.
+    *   🟡 **Inconclusive (40-60%):** Flagged for manual review (Reduces false positives).
+    *   🔴 **AI Generated (60-99%):** Detected synthetic artifacts.
+*   **Probability Breakdown:** Visual progress bars showing the exact tensor output from the model.
 
-```mermaid
-graph LR
-  A[User Client] -->|Upload Image| B(React + Vite Frontend)
-  B -->|HTTPS Request| C{Hugging Face Space}
-  C -->|Docker Container| D[FastAPI Server]
-  D -->|Inference| E[EfficientNetV2 Model]
-  E -->|Prediction JSON| B
+### ⚡ Modern Architecture
+*   **Drag & Drop Zone:** Intuitive file upload handling.
+*   **Cold-Boot Handling:** Intelligent UI states that inform the user if the server is waking up from sleep mode (common in serverless/cloud environments).
+*   **Responsive Design:** Fully optimized for Desktop, Tablet, and Mobile via Tailwind CSS.
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose |
+| :--- | :--- |
+| **React 18** | Component-based UI architecture. |
+| **Vite** | Next-generation build tool for instant HMR (Hot Module Replacement). |
+| **TypeScript** | Strict typing for robust API integration and error handling. |
+| **Tailwind CSS** | Utility-first styling for Glassmorphism effects and layout. |
+| **Axios / Fetch** | Asynchronous communication with the FastAPI backend. |
+
+---
+
+## 🚀 Usage
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/neural-verify-frontend.git
+
+# Enter directory
+cd neural-verify-frontend
+
+# Install dependencies
+npm install
